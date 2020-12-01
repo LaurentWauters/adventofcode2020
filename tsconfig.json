@@ -1,0 +1,7 @@
+{
+    "files": ["src/main.ts", "src/day1.ts"],
+    "compilerOptions": {
+      "noImplicitAny": false,
+      "target": "es5"
+    }
+  }
