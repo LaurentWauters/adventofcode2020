@@ -1,5 +1,13 @@
+// {
+//     "files": ["src/main.ts", "src/day1/day1.ts"],
+//     "compilerOptions": {
+//       "noImplicitAny": false,
+//       "target": "es5"
+//     }
+//   }
+
 {
-    "files": ["src/main.ts", "src/day1.ts"],
+    "files": ["src/main.ts", "src/day2/day2.ts", "src/scripts/JSONparser.ts"],
     "compilerOptions": {
       "noImplicitAny": false,
       "target": "es5"
