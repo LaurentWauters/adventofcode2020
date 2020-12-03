@@ -12,18 +12,18 @@ export class Pass {
     }
 }
 
-// export function calculatePass(array: Pass[]) {
-//     var counter = 0;
-//     for (var pass in array) {
-//         var count = 0;
-//         let res = pass.password.split("");
-//         for (let c in res) {
-//             if (c == pass.letterToCheck) {
-//                 count++;
-//             }
-//         }
-//         if (pass.lowestVal < count < pass.highestVal) {
-//             counter++;
-//         }
-//     }
-// }
+
+export function calculatePasss(pass: Pass): boolean {
+    var chars = pass.password.split("");
+    var counter = 0;
+    for(var i in chars) {
+        if(chars[i] == pass.letterToCheck) {
+            counter++;
+        }
+    }
+    if (pass.lowestVal <= counter && counter <= pass.highestVal) {
+        return true;
+    } else {
+        return false;
+    }
+}
