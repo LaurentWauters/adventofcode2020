@@ -11,15 +11,26 @@ var Pass = /** @class */ (function () {
     return Pass;
 }());
 exports.Pass = Pass;
+// export function calculatePasss(pass: Pass): boolean {
+//     var chars = pass.password.split("");
+//     var counter = 0;
+//     for(var i in chars) {
+//         if(chars[i] == pass.letterToCheck) {
+//             counter++;
+//         }
+//     }
+//     if (pass.lowestVal <= counter && counter <= pass.highestVal) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 function calculatePasss(pass) {
     var chars = pass.password.split("");
-    var counter = 0;
-    for (var i in chars) {
-        if (chars[i] == pass.letterToCheck) {
-            counter++;
-        }
+    if (chars[pass.lowestVal - 1] == pass.letterToCheck && chars[pass.highestVal - 1] != pass.letterToCheck) {
+        return true;
     }
-    if (pass.lowestVal <= counter && counter <= pass.highestVal) {
+    else if (chars[pass.lowestVal - 1] != pass.letterToCheck && chars[pass.highestVal - 1] == pass.letterToCheck) {
         return true;
     }
     else {
